@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         fontFamily: theme.fonts.nunitoSansBold,
     },
     textoBoton:{
-        color: theme.colors.colorNegro,
+        color: theme.colors.colorBoton,
         fontSize: theme.fontSizes.textoBoton,
         fontFamily: theme.fonts.nunitoSansBold
     }

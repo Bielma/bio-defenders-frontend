@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
 import Constants from 'expo-constants';
+import Login from './src/views/Login';
 
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -25,7 +26,8 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Fuentes />
+      <Login />
+      
     </View>
   );
 }
