@@ -45,6 +45,7 @@ const theme = {
         //Específicos
         colorLogo: '#58CC02',
         colorInput: '#00000060',
+        colorBoton: '#000000A4',
         colorNegro: '#000000',
 
 

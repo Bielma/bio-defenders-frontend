@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     subTitulo1:{
         color: theme.colors.neutroHare,
-        fontSize: theme.fontSizes.subTitulo2,
+        fontSize: theme.fontSizes.subTitulo1,
         fontFamily: theme.fonts.nunitoSansBlack,
     },
     subTitulo2:{
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         fontFamily: theme.fonts.nunitoSansBold,
     },
     textoBoton:{
-        color: theme.colors.colorNegro,
+        color: theme.colors.colorBoton,
         fontSize: theme.fontSizes.textoBoton,
         fontFamily: theme.fonts.nunitoSansBold
     }

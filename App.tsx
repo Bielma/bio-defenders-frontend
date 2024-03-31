@@ -7,7 +7,9 @@ import Constants from 'expo-constants';
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 
+import Login from './src/views/Login';
 import Fuentes from './src/views/Fuentes'
+import SignUp from './src/views/SignUp/SignUp';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -25,7 +27,8 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Fuentes />
+      <SignUp />
+      
     </View>
   );
 }
