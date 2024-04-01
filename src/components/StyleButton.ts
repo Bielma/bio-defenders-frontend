@@ -1,0 +1,43 @@
+import { StyleSheet } from "react-native";
+
+export const ButtonStyles = StyleSheet.create({
+  primaryButton: {
+    backgroundColor: "#58CC02",
+    padding: 10,
+    borderRadius: 16,
+    width: 310,
+    height: 58,
+    textAlign: "center",
+    marginBottom: 10,
+    marginTop: 10,
+    justifyContent: "center",
+    borderColor: "#58A700",
+    borderWidth: 0,
+    borderEndWidth: 0.1,
+    borderStartWidth: 0.1,
+    borderBottomWidth: 4,
+  },
+  secondaryButton: {
+    backgroundColor: "#F7F7F7",
+    padding: 10,
+    borderRadius: 16,
+    width: 310,
+    height: 58,
+    justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#E5E5E5",
+    borderBottomWidth: 3,
+  },
+  googleButton: {
+    marginTop: 10,
+    backgroundColor: "#F7F7F7",
+    padding: 10,
+    borderRadius: 16,
+    width: 310,
+    height: 58,
+    justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#E5E5E5",
+    borderBottomWidth: 3,
+  },
+});
