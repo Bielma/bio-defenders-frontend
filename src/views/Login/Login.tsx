@@ -8,10 +8,10 @@ const Login = () => {
     <View style={LoginStyles.container}>
       <Image source={require("../../../assets/señora_con_plantita_1.png")} />
 
-      <StyleText tipo="titulo1" style={LoginStyles.title}>
+      <StyleText tipo="titulo1">
         Inicia Sesión
       </StyleText>
-      <StyleText tipo="titulo1" style={LoginStyles.title2}>
+      <StyleText tipo="titulo1">
         o regístrate
       </StyleText>
       {/* <Text style={styles.title}>Inicia Sesión o regístrate</Text> */}

@@ -55,7 +55,7 @@ const theme = {
         titulo1: 30.5,
         titulo2: 24,
         titulo3: 22,
-        subTitulo1: 18,
+        subTitulo1p: 18,
         subTitulo2: 16,
         subTitulo3: 14,
         textoGeneral: 14,

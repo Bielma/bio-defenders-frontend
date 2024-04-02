@@ -10,6 +10,10 @@ import * as SplashScreen from "expo-splash-screen";
 import Login from "./src/views/Login";
 import Fuentes from "./src/views/Fuentes";
 import SignUp from "./src/views/SignUp/SignUp";
+import Bienvenida from "./src/views/Bienvenida/Bienvenida";
+import Boton from "./src/components/Boton";
+import { LoginStyles } from "./src/views/Login/constants";
+import theme from "./src/theme";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -24,9 +28,12 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
+  const handlePress = () => {
+    alert("Continuar!");
+  };
   return (
     <View style={styles.container}>
-      <SignUp />
+      <Boton onPress={handlePress} tipoTexto="textoBoton" textValue="botonPrimario" style={LoginStyles.primaryButton} activeOpacity={1} underlayColor={theme.colors.colorBoton}/>
     </View>
   );
 }
