@@ -31,10 +31,9 @@ export default function App() {
   const handlePress = () => {
     alert("Continuar!");
   };
+  {/* */}
   return (
-    <View style={styles.container}>
-      <Boton onPress={handlePress} tipoTexto="textoBoton" textValue="botonPrimario" style={LoginStyles.primaryButton} activeOpacity={1} underlayColor={theme.colors.colorBoton}/>
-    </View>
+    <SignUp/>
   );
 }
 
