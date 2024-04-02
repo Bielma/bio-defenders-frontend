@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 
 })
 
-export default function StyleText({ children, tipo, ...restOfProps }) {
+export default function StyleText({ children, tipo,style, ...restOfProps }) {
     const textStyles = [
         tipo === 'textoBioDefenders' && styles.textoBioDefenders,
         tipo === 'titulo1' && styles.titulo1,
@@ -68,6 +68,7 @@ export default function StyleText({ children, tipo, ...restOfProps }) {
         tipo === 'textoInput' && styles.textoInput,
         tipo === 'textoBoton' && styles.textoBoton,
         tipo === 'textSecondary' && styles.textSecondary,  // Asegúrate de que 'style' sea el último para que pueda sobrescribir los estilos anteriores si es necesario
+        style,
     ]
 
     return (
