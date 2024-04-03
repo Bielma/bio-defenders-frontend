@@ -35,35 +35,16 @@ export default function Header() {
             <Icon
               name="menu-outline"
               type="ionicon"
-              color={theme.colors.white}
-              size={25}
+              color={theme.colors.black}
+              size={30}
             />
           </TouchableOpacity>
-          <View
-            style={[
-              { borderColor: isFocused ? theme.colors.white : "transparent" },
-              HeaderComponentStyles.inputContainer,
-            ]}
-          >
-            <TextInput
-              style={HeaderComponentStyles.inputStyle}
-              placeholderTextColor="white"
-              onFocus={() => setFocus(true)}
-              onBlur={() => setFocus(false)}
-            />
-          </View>
-          <Icon
-            name="search"
-            type="ionicon"
-            color={theme.colors.white}
-            size={25}
-            style={{ paddingRight: 5, fontWeight: "bold" }}
-          />
+
           <Icon
             name="notifications-outline"
             type="ionicon"
-            color={theme.colors.white}
-            size={25}
+            color={theme.colors.black}
+            size={30}
           />
         </SafeAreaView>
       </View>

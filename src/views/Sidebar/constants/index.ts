@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { StyleSheet, Dimensions, Animated } from "react-native";
 import theme from "../../../theme";
-//import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const screenWidth = Dimensions.get("window").width;
 const screenHeight = Dimensions.get("window").height;
 export const deleteToken = () => {
   try {
-    //AsyncStorage.removeItem("@token");
+    AsyncStorage.removeItem("@token");
   } catch (error) {
     throw error;
   }
@@ -42,31 +42,32 @@ export const fadeItems = () => {
 };
 export const sidebarStyles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors.rgbBackground,
+    backgroundColor: theme.colors.white,
     height: screenHeight,
     width: screenWidth * 0.77,
     position: "absolute",
     display: "flex",
     shadowColor: "#000",
     shadowOffset: {
-      width: 1,
+      width: 0,
       height: 1,
     },
-    shadowOpacity: 0.5,
-    shadowRadius: 1,
-    elevation: 5,
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
   porfileContainer: {
     alignItems: "center",
     justifyContent: "center",
     borderBottomWidth: 0.5,
-    borderBottomColor: theme.colors.white,
+    borderBottomColor: theme.colors.primaryOne,
     borderBottomRightRadius: 24,
     borderBottomLeftRadius: 24,
   },
   img: {
-    width: 90,
-    height: 90,
+    width: "90%",
+    height: "90%",
     borderRadius: 50,
   },
   imgContainer: {
@@ -75,18 +76,18 @@ export const sidebarStyles = StyleSheet.create({
     borderRadius: 53,
     marginBottom: "10%",
     marginTop: "20%",
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.primaryFour,
     alignItems: "center",
     justifyContent: "center",
   },
   name: {
     fontSize: 18,
-    color: theme.colors.naranjaDos,
+    color: theme.colors.black,
     marginBottom: 7,
   },
   email: {
     fontSize: 10,
-    color: theme.colors.naranjaDos,
+    color: theme.colors.black,
     marginBottom: 25,
   },
   menuContainer: {
@@ -107,7 +108,7 @@ export const sidebarStyles = StyleSheet.create({
     position: "absolute",
     left: 68,
     top: 65,
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.naranjaDos,
     borderRadius: 50,
     padding: 5,
   },

@@ -2,16 +2,22 @@ import { StatusBar } from "expo-status-bar";
 import { Text, TextInput, View, Image, TouchableHighlight } from "react-native";
 import { LoginStyles } from "./constants";
 import StyleText from "../../components/StyleText.jsx";
+import theme from "../../theme";
+import { NAVIGATION_SCREEN } from "../../navigation/constants";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
 
+import { StackActions } from "@react-navigation/native";
 const Login = () => {
+  const navigation = useNavigation<NavigationProp<any>>();
+
   return (
     <View style={LoginStyles.container}>
       <Image source={require("../../../assets/señora_con_plantita_1.png")} />
 
-      <StyleText tipo="titulo1">
+      <StyleText tipo="titulo1" style={{}}>
         Inicia Sesión
       </StyleText>
-      <StyleText tipo="titulo1">
+      <StyleText tipo="titulo1" style={{}}>
         o regístrate
       </StyleText>
       {/* <Text style={styles.title}>Inicia Sesión o regístrate</Text> */}
@@ -24,8 +30,8 @@ const Login = () => {
       <TouchableHighlight
         style={LoginStyles.primaryButton}
         activeOpacity={0.6}
-        underlayColor="#DDDDDD"
-        onPress={() => alert("Continuar!")}
+        underlayColor={theme.colors.white}
+        onPress={() => navigation.dispatch(StackActions.replace("Home"))}
       >
         <Text
           style={{ color: "#F7F7F7", textAlign: "center", fontWeight: "bold" }}
@@ -41,7 +47,6 @@ const Login = () => {
         style={LoginStyles.googleButton}
         activeOpacity={0.6}
         underlayColor="#DDDDDD"
-        onPress={() => alert("Pressed!")}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Image

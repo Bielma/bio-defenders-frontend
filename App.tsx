@@ -1,19 +1,10 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import React, { useState, useEffect } from "react";
-import Constants from "expo-constants";
-
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-
-import Login from "./src/views/Login";
-import Fuentes from "./src/views/Fuentes";
-import SignUp from "./src/views/SignUp/SignUp";
-import Bienvenida from "./src/views/Bienvenida/Bienvenida";
-import Boton from "./src/components/Boton";
-import { LoginStyles } from "./src/views/Login/constants";
-import theme from "./src/theme";
+import NavigationStacks from "./src/navigation/NavigationStacks";
+import Home from "./src/views/Home";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -31,9 +22,13 @@ export default function App() {
   const handlePress = () => {
     alert("Continuar!");
   };
-  {/* */}
+  {
+    /* */
+  }
   return (
-    <SignUp/>
+    <NavigationContainer>
+      <NavigationStacks />
+    </NavigationContainer>
   );
 }
 
