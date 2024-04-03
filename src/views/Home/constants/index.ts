@@ -10,6 +10,6 @@ export const HomeStyles = StyleSheet.create({
     zIndex: 1,
     position: "absolute",
     width: "100%",
-    top: "5%",
+    top: 0,
   },
 });

@@ -25,7 +25,11 @@ export default function App() {
   {
     /* */
   }
-  return <Home />;
+  return (
+    <NavigationContainer>
+      <NavigationStacks />
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({

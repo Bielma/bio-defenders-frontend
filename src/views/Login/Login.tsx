@@ -4,9 +4,12 @@ import { LoginStyles } from "./constants";
 import StyleText from "../../components/StyleText.jsx";
 import theme from "../../theme";
 import { NAVIGATION_SCREEN } from "../../navigation/constants";
-import { navigation } from "../../navigation/constants";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
+
 import { StackActions } from "@react-navigation/native";
 const Login = () => {
+  const navigation = useNavigation<NavigationProp<any>>();
+
   return (
     <View style={LoginStyles.container}>
       <Image source={require("../../../assets/señora_con_plantita_1.png")} />
@@ -28,7 +31,7 @@ const Login = () => {
         style={LoginStyles.primaryButton}
         activeOpacity={0.6}
         underlayColor={theme.colors.white}
-        onPress={() => alert("Continuar!")}
+        onPress={() => navigation.dispatch(StackActions.replace("Home"))}
       >
         <Text
           style={{ color: "#F7F7F7", textAlign: "center", fontWeight: "bold" }}
@@ -44,9 +47,6 @@ const Login = () => {
         style={LoginStyles.googleButton}
         activeOpacity={0.6}
         underlayColor="#DDDDDD"
-        // onPress={() =>
-        //   navigation.dispatch(StackActions.replace(NAVIGATION_SCREEN.HOME))
-        // }
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Image
