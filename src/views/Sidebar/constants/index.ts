@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { StyleSheet, Dimensions, Animated } from "react-native";
 import theme from "../../../theme";
-//import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const screenWidth = Dimensions.get("window").width;
 const screenHeight = Dimensions.get("window").height;
 export const deleteToken = () => {
   try {
-    //AsyncStorage.removeItem("@token");
+    AsyncStorage.removeItem("@token");
   } catch (error) {
     throw error;
   }
@@ -49,12 +49,13 @@ export const sidebarStyles = StyleSheet.create({
     display: "flex",
     shadowColor: "#000",
     shadowOffset: {
-      width: 1,
+      width: 0,
       height: 1,
     },
-    shadowOpacity: 0.5,
-    shadowRadius: 1,
-    elevation: 5,
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
   porfileContainer: {
     alignItems: "center",
