@@ -7,7 +7,8 @@ export const InitialSurveyStyles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     width: "100%",
-    justifyContent: "space-between",
+    paddingTop: "10%",
+    paddingBottom: "10%",
   },
   title: {
     fontSize: 20,
@@ -16,7 +17,6 @@ export const InitialSurveyStyles = StyleSheet.create({
 
   BarContainer: {
     borderRadius: 10,
-    marginTop: "7%",
     width: "100%",
     display: "flex",
     alignItems: "center",
@@ -26,11 +26,24 @@ export const InitialSurveyStyles = StyleSheet.create({
     backgroundColor: "#333",
     borderRadius: 10,
   },
-  section: {
+  questionSection: {
+    marginTop: "7%",
     width: "100%",
     alignItems: "center",
+    flex: 1,
+  },
+  optionsSecion: {
+    width: "100%",
+    alignItems: "center",
+    flex: 1,
+  },
+  continueSection: {
+    width: "100%",
+    alignItems: "center",
+    flex: 1,
   },
   input: {
+    paddingLeft: 20,
     width: "80%",
     height: 58,
     marginTop: "5%",
