@@ -9,8 +9,6 @@ const Home = () => {
       <View style={HomeStyles.headerContainer}>
         <Header />
       </View>
-
-      <Text>Home</Text>
     </View>
   );
 };

@@ -3,7 +3,7 @@ import theme from "../../../theme";
 export const HomeStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.rosaDos,
+    backgroundColor: theme.colors.white,
   },
   headerContainer: {
     zIndex: 1,

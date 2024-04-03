@@ -86,7 +86,7 @@ const Sidebar = ({ isOpen, handleClose, nameScreen }: ISidebarProps) => {
                             name="pencil"
                             type="material-community"
                             size={16}
-                            color={theme.colors.naranjaUno}
+                            color={theme.colors.white}
                           />
                         </View>
                       </View>

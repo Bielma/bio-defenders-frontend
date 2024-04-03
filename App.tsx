@@ -14,6 +14,7 @@ import Bienvenida from "./src/views/Bienvenida/Bienvenida";
 import Boton from "./src/components/Boton";
 import { LoginStyles } from "./src/views/Login/constants";
 import theme from "./src/theme";
+import Home from "./src/views/Home";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -31,10 +32,10 @@ export default function App() {
   const handlePress = () => {
     alert("Continuar!");
   };
-  {/* */}
-  return (
-    <SignUp/>
-  );
+  {
+    /* */
+  }
+  return <Home />;
 }
 
 const styles = StyleSheet.create({

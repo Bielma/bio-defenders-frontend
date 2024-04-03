@@ -42,7 +42,7 @@ export const fadeItems = () => {
 };
 export const sidebarStyles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors.rgbBackground,
+    backgroundColor: theme.colors.white,
     height: screenHeight,
     width: screenWidth * 0.77,
     position: "absolute",
@@ -60,13 +60,13 @@ export const sidebarStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderBottomWidth: 0.5,
-    borderBottomColor: theme.colors.white,
+    borderBottomColor: theme.colors.primaryOne,
     borderBottomRightRadius: 24,
     borderBottomLeftRadius: 24,
   },
   img: {
-    width: 90,
-    height: 90,
+    width: "90%",
+    height: "90%",
     borderRadius: 50,
   },
   imgContainer: {
@@ -75,18 +75,18 @@ export const sidebarStyles = StyleSheet.create({
     borderRadius: 53,
     marginBottom: "10%",
     marginTop: "20%",
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.primaryFour,
     alignItems: "center",
     justifyContent: "center",
   },
   name: {
     fontSize: 18,
-    color: theme.colors.naranjaDos,
+    color: theme.colors.black,
     marginBottom: 7,
   },
   email: {
     fontSize: 10,
-    color: theme.colors.naranjaDos,
+    color: theme.colors.black,
     marginBottom: 25,
   },
   menuContainer: {
@@ -107,7 +107,7 @@ export const sidebarStyles = StyleSheet.create({
     position: "absolute",
     left: 68,
     top: 65,
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.naranjaDos,
     borderRadius: 50,
     padding: 5,
   },

@@ -11,6 +11,8 @@ export const HeaderComponentStyles = StyleSheet.create({
   },
   row: {
     flexDirection: "row",
+    justifyContent: "space-between",
+    width: "90%",
   },
   inputStyle: {
     height: 20,
