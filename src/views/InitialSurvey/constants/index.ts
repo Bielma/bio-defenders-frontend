@@ -30,7 +30,7 @@ export const InitialSurveyStyles = StyleSheet.create({
     marginTop: "7%",
     width: "100%",
     alignItems: "center",
-    flex: 1,
+    flex: 0.5,
   },
   optionsSecion: {
     width: "100%",
@@ -40,7 +40,7 @@ export const InitialSurveyStyles = StyleSheet.create({
   continueSection: {
     width: "100%",
     alignItems: "center",
-    flex: 1,
+    flex: 2,
   },
   input: {
     paddingLeft: 20,
