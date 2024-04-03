@@ -4,6 +4,7 @@ export const HomeStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.white,
+    flexDirection: "column-reverse",
   },
   headerContainer: {
     zIndex: 1,
