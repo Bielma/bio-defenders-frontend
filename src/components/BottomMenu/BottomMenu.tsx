@@ -20,7 +20,7 @@ const BottomMenu = ({ screenName }: IBottomMenuProps) => {
       : theme.colors.white;
 
   const retosColor =
-    screenName === "Retos" ? theme.colors.rgbBackground : theme.colors.white;
+    screenName === "Tips" ? theme.colors.rgbBackground : theme.colors.white;
 
   return (
     <View style={BottomMenuStyles.container}>
@@ -60,11 +60,10 @@ const BottomMenu = ({ screenName }: IBottomMenuProps) => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        onPress={() => navigation.navigate("Tips")}
       >
         <Icon name="trophy" type="material-community" color={retosColor} />
-        <Text style={[BottomMenuStyles.text, { color: retosColor }]}>
-          Retos
-        </Text>
+        <Text style={[BottomMenuStyles.text, { color: retosColor }]}>Tips</Text>
       </TouchableOpacity>
     </View>
   );

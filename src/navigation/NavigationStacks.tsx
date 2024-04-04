@@ -9,6 +9,7 @@ import InitialSurvey from "../views/InitialSurvey/InitialSurvey";
 import PlantsStore from "../views/PlantsStore";
 import { Icon } from "@rneui/base";
 import theme from "../theme";
+import Tips from "../views/Tips";
 
 const Stack = createNativeStackNavigator();
 const NavigationStacks = () => {
@@ -19,6 +20,7 @@ const NavigationStacks = () => {
       <Stack.Screen name="Signup" component={SignUp} />
       <Stack.Screen name="Start" component={Start} />
       <Stack.Screen name="Initial" component={InitialSurvey} />
+      <Stack.Screen name="Tips" component={Tips} />
       <Stack.Screen
         name="PlantsStore"
         component={PlantsStore}
