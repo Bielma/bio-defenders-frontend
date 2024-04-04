@@ -2,14 +2,18 @@ import { StyleSheet } from "react-native";
 import theme from "../../../theme";
 
 export const frames = {
-  frame1: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
-  frame2: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame02_v1.png"),
-  frame3: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame03_v1.png"),
-  frame4: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame04_v1.png"),
-  frame5: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame05_v1.png"),
-  frame6: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame06_v1.png"),
-  frame7: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame07_v1.png"),
-  frame8: require("../../../../assets/frames/version_gratuita/plantas/version_01/frame08_v1.png"),
+  frame1: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame2: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame3: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame4: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame5: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame6: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame7: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame01_v1.png"),
+  frame8: require("@biodefenders/../assets/frames/version_gratuita/plantas/version_01/frame08_v1.png"),
+};
+
+export const macetas = {
+  maceta1: require("@biodefenders/../assets/frames/version_gratuita/macetas/maceta_01/frame01_macetita01.png"),
 };
 //frames/version_gratuita/plantas/version_01/frame01_v1.png
 export const HomeStyles = StyleSheet.create({

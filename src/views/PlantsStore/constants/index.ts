@@ -11,4 +11,13 @@ export const PlantsStoreStyles = StyleSheet.create({
   row: {
     flexDirection: "row",
   },
+  coinsContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: theme.colors.white,
+    padding: "2%",
+    borderRadius: 15,
+    marginBottom: "3%",
+  },
 });
