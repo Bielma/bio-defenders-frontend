@@ -17,7 +17,7 @@ const Home = () => {
       <View style={HomeStyles.content}>
         <BookTouchable top={350} left={230} onPress={onPress} />
         <View style={HomeStyles.arbolContainer}>
-          <Image source={frames.frame8} />
+          <Image source={frames.frame1} />
         </View>
       </View>
 
