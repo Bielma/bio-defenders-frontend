@@ -46,7 +46,6 @@ const Tips = () => {
           {tips.map((tip, index) => (
             <View key={index} style={TipsStyles.card}>
               <Text>{tip.recomendacion}</Text>
-              <Text>{tip.fuente}</Text>
               <Text>{tip.alcance}</Text>
               <Text>{tip.categoria}</Text>
             </View>
