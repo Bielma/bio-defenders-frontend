@@ -120,7 +120,7 @@ const Lessons = () => {
             disabled={false}
             style={LoginStyles.googleButton}
             key={index}
-            tipoTexto="titulo3"
+            tipoTexto="subtitulo1"
             textStyles={{
               textAlign: "center",
             }}

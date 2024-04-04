@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { SafeAreaView, ScrollView, Text, View } from "react-native";
 import { TipsStyles } from "./constants";
 
 import { HomeStyles } from "../Home/constants";
@@ -41,16 +41,18 @@ const Tips = () => {
       <View style={HomeStyles.headerContainer}>
         <Header />
       </View>
-      <View style={TipsStyles.content}>
-        {tips.map((tip, index) => (
-          <View key={index} style={TipsStyles.card}>
-            <Text>{tip.recomendacion}</Text>
-            <Text>{tip.fuente}</Text>
-            <Text>{tip.alcance}</Text>
-            <Text>{tip.categoria}</Text>
-          </View>
-        ))}
-      </View>
+      <SafeAreaView style={TipsStyles.content}>
+        <ScrollView>
+          {tips.map((tip, index) => (
+            <View key={index} style={TipsStyles.card}>
+              <Text>{tip.recomendacion}</Text>
+              <Text>{tip.fuente}</Text>
+              <Text>{tip.alcance}</Text>
+              <Text>{tip.categoria}</Text>
+            </View>
+          ))}
+        </ScrollView>
+      </SafeAreaView>
 
       <View style={{ flex: 0.1 }}>
         <BottomMenu screenName="Home" />
