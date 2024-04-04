@@ -89,10 +89,6 @@ const Lessons = () => {
   };
   return (
     <View style={HomeStyles.container}>
-      <View style={HomeStyles.headerContainer}>
-        <Header />
-      </View>
-
       <View
         style={[
           HomeStyles.content,

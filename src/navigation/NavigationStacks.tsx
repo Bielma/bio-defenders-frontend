@@ -23,7 +23,34 @@ const NavigationStacks = () => {
       <Stack.Screen name="Start" component={Start} />
       <Stack.Screen name="Initial" component={InitialSurvey} />
       <Stack.Screen name="Tips" component={Tips} />
-      <Stack.Screen name="Lesson" component={Lessons} />
+      <Stack.Screen
+        name="Lesson"
+        component={Lessons}
+        options={({ navigation }) => ({
+          headerShown: true,
+          headerTitleAlign: "center",
+          headerLeft: () => (
+            <SafeAreaView>
+              <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Icon
+                  name="chevron-left"
+                  type="material-community"
+                  size={30}
+                  color={theme.colors.black}
+                />
+              </TouchableOpacity>
+            </SafeAreaView>
+          ),
+          headerStyle: {
+            backgroundColor: theme.colors.white,
+          },
+          headerTitleStyle: {
+            fontSize: 22,
+          },
+          headerShadowVisible: false,
+          headerTitle: "Lección",
+        })}
+      />
       <Stack.Screen name="Celebration" component={Celebration} />
       <Stack.Screen
         name="PlantsStore"
