@@ -5,9 +5,13 @@ import Header from "../../components/Header";
 import BottomMenu from "../../components/BottomMenu";
 import BookTouchable from "../../components/BookTouchable/BookTouchable";
 import { frames } from "./constants";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 const Home = () => {
-  const onPress = () => {};
+  const navigation = useNavigation<NavigationProp<any>>();
+  const onPress = () => {
+    navigation.navigate("Lesson");
+  };
   return (
     <View style={HomeStyles.container}>
       <View style={HomeStyles.headerContainer}>
@@ -25,7 +29,7 @@ const Home = () => {
         <BookTouchable top={90} left={130} onPress={onPress} />
         <View style={HomeStyles.arbolContainer}>
           <Image source={frames.frame8} style={{ marginLeft: 40 }} />
-          <Image source={macetas.maceta1} />
+          <Image source={macetas.maceta1} style={{ marginTop: -10 }} />
         </View>
       </View>
       <View style={{ flex: 0.1 }}>

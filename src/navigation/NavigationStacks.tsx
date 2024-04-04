@@ -10,6 +10,8 @@ import PlantsStore from "../views/PlantsStore";
 import { Icon } from "@rneui/base";
 import theme from "../theme";
 import Tips from "../views/Tips";
+import Lessons from "../views/Lessons";
+import Celebration from "../views/Celebration/Celebration";
 
 const Stack = createNativeStackNavigator();
 const NavigationStacks = () => {
@@ -21,6 +23,8 @@ const NavigationStacks = () => {
       <Stack.Screen name="Start" component={Start} />
       <Stack.Screen name="Initial" component={InitialSurvey} />
       <Stack.Screen name="Tips" component={Tips} />
+      <Stack.Screen name="Lesson" component={Lessons} />
+      <Stack.Screen name="Celebration" component={Celebration} />
       <Stack.Screen
         name="PlantsStore"
         component={PlantsStore}
