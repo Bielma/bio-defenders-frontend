@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image, Text, TouchableHighlight, View } from "react-native";
 import StyleText from "../../components/StyleText";
 import { ButtonStyles } from "../../components/StyleButton";
 import { CelebrationStyles } from "./constants";
 import theme from "../../theme";
+import {
+  NavigationProp,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
 
 interface ICelebrationProps {
   name: string;
@@ -11,7 +16,16 @@ interface ICelebrationProps {
   hits: number;
 }
 
-const Celebration = ({ name, exp, hits }: ICelebrationProps) => {
+const Celebration = () => {
+  const navigation = useNavigation<NavigationProp<any>>();
+  const [exp, setExp] = React.useState(0);
+  const [hits, setHits] = React.useState(0);
+  const route = useRoute();
+  useEffect(() => {
+    const { name, exp, hits } = route.params;
+    setExp(exp);
+    setHits(hits);
+  }, []);
   return (
     <View style={CelebrationStyles.container}>
       <View style={CelebrationStyles.imageContainer}>
@@ -79,7 +93,7 @@ const Celebration = ({ name, exp, hits }: ICelebrationProps) => {
         style={[ButtonStyles.primaryButton, CelebrationStyles.continueButton]}
         activeOpacity={0.6}
         underlayColor="#DDDDDD"
-        onPress={() => alert("Continuar!")}
+        onPress={() => navigation.navigate("Home")}
       >
         <StyleText
           tipo={"textoBoton"}
