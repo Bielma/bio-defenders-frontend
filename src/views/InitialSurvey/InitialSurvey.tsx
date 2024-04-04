@@ -7,6 +7,7 @@ import Boton from "../../components/Boton";
 import questionsJson from "../../constants/questions";
 import StyleText from "../../components/StyleText";
 import { LoginStyles } from "../../views/Login/constants";
+import { sendRequest } from "../../utils/utils";
 interface Question {
   question: string;
   options: string[];
@@ -188,22 +189,44 @@ const InitialSurvey = () => {
       type: "consumo",
     },
   ]);
-
+  const [loading, setLoading] = useState<boolean>(false);
+  const handleSubmit = async () => {
+    setLoading(true);
+    const questionsData = questions.filter((q) => q.answer !== "");
+    console.log(questionsData);
+    const response = await sendRequest("/initial-questions", {
+      method: "POST",
+      body: JSON.stringify(questionsData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.success) {
+      //TODO: Redirect to main page
+      console.log(response.message);
+    } else {
+      console.log(response);
+    }
+    setLoading(false);
+  };
   useEffect(() => {
     if (questions[questionIndex]?.showIf) {
       const { id, value } = questions[questionIndex].showIf;
-      console.log({ id, value });
       if (questions.find((q) => q.id === id)?.answer !== value) {
         setQuestionIndex((prevquestionIndex) => prevquestionIndex + 1);
+      }
+      if (isLastQuestion()) {
+        handleSubmit();
+        return;
       }
     }
     setProgress((prevProgress) => prevProgress + 0.8 / (questions.length - 1));
   }, [questionIndex]);
-
+  const isLastQuestion = () => questionIndex >= questions.length - 1;
   const handlePress = () => {
     setQuestionIndex((prevquestionIndex) => prevquestionIndex + 1);
-    if (questionIndex >= questions.length - 1) {
-      alert("Continuar!");
+    if (isLastQuestion()) {
+      handleSubmit();
       return;
     }
   };
@@ -217,7 +240,16 @@ const InitialSurvey = () => {
       handlePress();
     }
   };
-  return (
+  return loading ? (
+    <View
+      style={[
+        InitialSurveyStyles.container,
+        { flex: 1, justifyContent: "center" },
+      ]}
+    >
+      <Text>Cargando...</Text>
+    </View>
+  ) : (
     <View style={InitialSurveyStyles.container}>
       <View style={InitialSurveyStyles.BarContainer}>
         <ProgressBar progress={progress} />
