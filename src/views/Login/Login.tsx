@@ -5,8 +5,21 @@ import StyleText from "../../components/StyleText.jsx";
 import theme from "../../theme";
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { StackActions } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 const Login = () => {
   const navigation = useNavigation<NavigationProp<any>>();
+
+  const isEndedSurvey = async () => {
+    const onBoarding = await AsyncStorage.getItem("onboardingDone");
+    return onBoarding === "true";
+  };
+
+  const startSurvey = async () => {
+    const surveyEnded = await isEndedSurvey();
+    surveyEnded
+      ? navigation.dispatch(StackActions.replace("Home"))
+      : navigation.dispatch(StackActions.replace("Start"));
+  };
 
   return (
     <View style={LoginStyles.container}>
@@ -29,7 +42,7 @@ const Login = () => {
         style={LoginStyles.primaryButton}
         activeOpacity={0.6}
         underlayColor={theme.colors.white}
-        onPress={() => navigation.dispatch(StackActions.replace("Home"))}
+        onPress={startSurvey}
       >
         <Text
           style={{ color: "#F7F7F7", textAlign: "center", fontWeight: "bold" }}

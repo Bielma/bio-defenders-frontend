@@ -5,8 +5,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import theme from "../../theme";
 //import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { imageSource, fadeItems, iconSize, deleteToken } from "./constants";
-//import { useNavigation } from "@react-navigation/native";
-//import { StackActions } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
+import { StackActions } from "@react-navigation/native";
 //import { NAVIGATION_SCREEN } from "../navigation/constants";
 import {
   Text,
@@ -23,12 +23,12 @@ interface ISidebarProps {
   nameScreen: string;
 }
 const Sidebar = ({ isOpen, handleClose, nameScreen }: ISidebarProps) => {
-  //const navigation = useNavigation<any>();
+  const navigation = useNavigation<any>();
   const { fadeAnim, fadeIn, fadeOut } = fadeItems();
 
   const logout = () => {
     deleteToken();
-    // navigation.dispatch(StackActions.replace(NAVIGATION_SCREEN.LOGIN));
+    navigation.dispatch(StackActions.replace("index"));
   };
   const goToProfile = () => {
     //navigation.navigate(NAVIGATION_SCREEN.PROFILE);
@@ -75,36 +75,14 @@ const Sidebar = ({ isOpen, handleClose, nameScreen }: ISidebarProps) => {
               >
                 <TouchableWithoutFeedback>
                   <View style={sidebarStyles.container}>
-                    <View style={sidebarStyles.porfileContainer}>
-                      <View style={sidebarStyles.imgContainer}>
-                        <Image
-                          source={{ uri: imageSource }}
-                          style={sidebarStyles.img}
-                        />
-                        <View style={sidebarStyles.iconEditContainer}>
-                          <Icon
-                            name="pencil"
-                            type="material-community"
-                            size={16}
-                            color={theme.colors.white}
-                          />
-                        </View>
-                      </View>
-                      <View style={sidebarStyles.textPorfileContainer}>
-                        <Text style={sidebarStyles.name}>Nick R. Bocker</Text>
-                        <Text style={sidebarStyles.email}>
-                          example@gmail.com
-                        </Text>
-                      </View>
-                    </View>
                     <SafeAreaView style={sidebarStyles.menuContainer}>
                       <TouchableOpacity
                         style={sidebarStyles.itemContainer}
                         onPress={goToProfile}
                       >
                         <Icon
-                          name="person-outline"
-                          type="ionicon"
+                          name="account"
+                          type="material-community"
                           size={iconSize}
                           color={colorPorfile}
                         />
@@ -120,8 +98,8 @@ const Sidebar = ({ isOpen, handleClose, nameScreen }: ISidebarProps) => {
 
                       <View style={sidebarStyles.itemContainer}>
                         <Icon
-                          name="home-outline"
-                          type="ionicon"
+                          name="home"
+                          type="material-community"
                           size={iconSize}
                           color={colorHome}
                         />
@@ -131,6 +109,25 @@ const Sidebar = ({ isOpen, handleClose, nameScreen }: ISidebarProps) => {
                           Home
                         </Text>
                       </View>
+                      <TouchableOpacity
+                        style={sidebarStyles.itemContainer}
+                        onPress={goToProfile}
+                      >
+                        <Icon
+                          name="cog"
+                          type="material-community"
+                          size={iconSize}
+                          color={colorPorfile}
+                        />
+                        <Text
+                          style={[
+                            sidebarStyles.textItem,
+                            { color: colorPorfile },
+                          ]}
+                        >
+                          Configuración
+                        </Text>
+                      </TouchableOpacity>
                       <TouchableOpacity
                         style={sidebarStyles.itemContainer}
                         onPress={logout}

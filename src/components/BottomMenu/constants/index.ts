@@ -5,7 +5,7 @@ export const BottomMenuStyles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.primaryFour,
     flexDirection: "row",
-    flex: 0.1,
+    height: "100%",
     alignItems: "center",
     justifyContent: "center",
     borderTopRightRadius: 20,
@@ -22,6 +22,5 @@ export const BottomMenuStyles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    color: theme.colors.white,
   },
 });

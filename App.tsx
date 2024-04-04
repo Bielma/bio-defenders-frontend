@@ -5,6 +5,7 @@ import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import NavigationStacks from "./src/navigation/NavigationStacks";
 import Home from "./src/views/Home";
+import AuthManager from "./src/Auth/AuthManager";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
