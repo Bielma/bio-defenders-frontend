@@ -8,11 +8,15 @@ import questionsJson from "../../constants/questions";
 import StyleText from "../../components/StyleText";
 import { LoginStyles } from "../../views/Login/constants";
 import { sendRequest } from "../../utils/utils";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 interface Question {
   question: string;
   options: string[];
 }
 const InitialSurvey = () => {
+  const navigation = useNavigation<NavigationProp<any>>();
+
   const [progress, setProgress] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [questions, setQuestions] = useState<any>([
@@ -204,6 +208,19 @@ const InitialSurvey = () => {
     if (response.success) {
       //TODO: Redirect to main page
       console.log(response.message);
+      //Save 'onbardingDone' on asyncStorage
+      await AsyncStorage.setItem("onboardingDone", "true");
+      await AsyncStorage.setItem(
+        "huellaCarbono",
+        JSON.stringify(response.huellaDeCarbono)
+      );
+      await AsyncStorage.setItem("recomendationsId", response.recomendationsId);
+      await AsyncStorage.setItem(
+        "recommendations",
+        JSON.stringify(response.recomendaciones)
+      );
+
+      navigation.navigate("Home");
     } else {
       console.log(response);
     }
