@@ -3,8 +3,10 @@ const theme = {
     //common
     white: "#FFFFFF",
     black: "#000000",
+    gray: "#F3F3F3",
     transparent: "transparent",
     rgbBackground: "rgba(0, 0, 0, 0.5)",
+    darkGray: "#333333",
 
     //Primarios
     primaryOne: "#3A701C",

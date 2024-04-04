@@ -13,7 +13,7 @@ export const deleteToken = () => {
   }
 };
 
-export const iconSize = 16;
+export const iconSize = 20;
 export const imageSource =
   "https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg";
 
@@ -98,7 +98,7 @@ export const sidebarStyles = StyleSheet.create({
   itemContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: "10%",
+    marginBottom: "13%",
   },
   textItem: {
     fontSize: 16,
