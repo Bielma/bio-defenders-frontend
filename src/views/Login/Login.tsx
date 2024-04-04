@@ -3,9 +3,7 @@ import { Text, TextInput, View, Image, TouchableHighlight } from "react-native";
 import { LoginStyles } from "./constants";
 import StyleText from "../../components/StyleText.jsx";
 import theme from "../../theme";
-import { NAVIGATION_SCREEN } from "../../navigation/constants";
 import { useNavigation, NavigationProp } from "@react-navigation/native";
-
 import { StackActions } from "@react-navigation/native";
 const Login = () => {
   const navigation = useNavigation<NavigationProp<any>>();
