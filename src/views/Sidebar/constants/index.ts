@@ -8,6 +8,11 @@ const screenHeight = Dimensions.get("window").height;
 export const deleteToken = () => {
   try {
     AsyncStorage.removeItem("@token");
+    AsyncStorage.multiRemove([
+      "onboardingDone",
+      "recomendationsId",
+      "recommendations",
+    ]);
   } catch (error) {
     throw error;
   }

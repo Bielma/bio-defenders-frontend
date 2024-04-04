@@ -20,6 +20,7 @@ export const InitialSurveyStyles = StyleSheet.create({
     width: "100%",
     display: "flex",
     alignItems: "center",
+    marginTop: "5%",
   },
   bar: {
     height: 20,
