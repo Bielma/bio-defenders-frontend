@@ -7,7 +7,6 @@ const theme = {
     transparent: "transparent",
     rgbBackground: "rgba(0, 0, 0, 0.5)",
     darkGray: "#333333",
-
     //Primarios
     primaryOne: "#3A701C",
     primaryTwo: "#48882A",
