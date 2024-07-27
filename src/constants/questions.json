@@ -1,0 +1,69 @@
+{
+  "casa": [
+    {
+      "question": "cuanto es tu gasto mensual de luz?",
+      "options": []
+    },
+    {
+      "question": "¿Usas cilindros de gas o gas estacionario?",
+      "options": ["Cilindro", "Estacionario"]
+    },
+    {
+      "question": "¿Aproximadamente cuanto gastas de gas estacionario al año?",
+      "options": []
+    },
+    {
+      "question": "¿Cuantos cilindros de gas gastas al mes?",
+      "options": []
+    },
+    {
+      "question": "¿Cuentas con climatizadores en casa?",
+      "options": ["Si", "No"],
+      "subQuestions": [
+        {
+          "question": "¿Aire acondicionado o calentador?",
+          "options": ["Aire", "Calentador"],
+          "subQuestions": [
+            {
+              "question": "De que tipo",
+              "options": ["Gas", "Electrico", "Quemadores"]
+            },
+            {
+              "question": "Cuanto tiempo se usan?",
+              "options": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "consumo": [
+    {
+      "question": "¿Aproximadamente cuánta carne roja consumes a la semana?",
+      "options": []
+    },
+    {
+      "question": "¿Con cuánta frecuencia compras ropa?",
+      "options": []
+    },
+    {
+      "question": "¿con cuánta frecuencia consumes plásticos de un solo uso?",
+      "options": ["", ""]
+    }
+  ],
+  "transporte": [
+    {
+      "question": "¿que tipo de transporte frecuentemente utilizas?",
+      "options": ["O", "H", "C"]
+    },
+    {
+      "question": "¿cuanto gastas de gasolina a la semana?",
+      "options": ["Elon Musk", "Jeff Bezos", "Mark Zuckerberg"]
+    },
+    {
+      "question": "¿con cuánta frecuencia usas transporte público?",
+      "options": []
+    }
+  ]
+}
